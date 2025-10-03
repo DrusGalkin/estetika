@@ -2,8 +2,6 @@ import {useEffect, useState} from "react";
 
 import MobileNav from "./mobile_nav.jsx";
 import DesktopNav from "./desktop_nav.jsx";
-import WOW from 'wowjs';
-import 'animate.css';
 
 export default function Header() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -18,13 +16,6 @@ export default function Header() {
             window.removeEventListener('resize', handleResize)
         }
     })
-
-    useEffect(() => {
-        new WOW.WOW({
-            live: false,
-        }).init();
-    }, []);
-
     return (
         <div className="w-full text-white flex justify-center items-center p-6 bg-[#2654DC]">
 
